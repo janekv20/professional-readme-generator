@@ -134,8 +134,8 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(filename, data, (err) => {
+function writeToFile(readme, data) {
+    fs.writeFile('./generate-readme.md', readme, data, (err) => {
         if (err)
             throw err;
         console.log('Information is generated! Check out the README to see the output.')

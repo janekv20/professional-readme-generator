@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     if (license !== 'no license') {
-        return '';
+        return '![badge](https://img.shields.io/badge/license-${license}-green)';
     } else {
         return '';
     }
@@ -12,7 +12,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
     if (license !== 'no license') {
-        return '';
+        return '[${license}](https://choosealicense.com/licenses/${license})';
     } else {
         return '';
     }
@@ -22,7 +22,13 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     if (license !== 'no license') {
-        return '';
+        return `
+        ## [License](#table-of-contents)
+
+        This project is covered by the following license:
+
+        ${renderLicenseLink(license)}
+        `;
     } else {
         return '';
     }
@@ -32,38 +38,39 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
     return `# ${data.title}
 
-    ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
-    ## Table-of-Contents
+## Table-of-Contents
 
-    * [Description](#description)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Contribution Guidelines](#contribution)
-    * [Testing Instructions](#testing)
-    * [Contact](#contact)
+* [License](#license)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribution Guidelines](#contribution)
+* [Testing Instructions](#testing)
+* [Contact](#contact)
 
-    ## [Description](#table-of-contents)
+## [Description](#table-of-contents)
 
     ${data.description}
     
-    ## [Installation](#table-of-contents)
+## [Installation](#table-of-contents)
 
     ${data.installation}
 
-    ## [Usage](#table-of-contents)
+## [Usage](#table-of-contents)
 
     ${data.usage}
 
-    ## [Contribution Guidelines](#table-of-contents)
+## [Contribution](#table-of-contents)
 
     ${data.contribution}
 
-    ## [Testing Instructions](#table-of-contents)
+## [Testing](#table-of-contents)
 
     ${data.testing}
 
-    ## [Contact](#table-of-contents)
+## [Contact](#table-of-contents)
 
    [GitHub Repository](https://github.com/${data.github})
 
