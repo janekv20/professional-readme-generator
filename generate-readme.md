@@ -1,6 +1,6 @@
-# Sample
+# Sample README
 
-![badge](https://img.shields.io/badge/license-Common-Development-and-Distribution-green)
+![badge](https://img.shields.io/badge/license-MIT-green)
 
 ## Table-of-Contents
 
@@ -14,33 +14,33 @@
 
 ## [License](#table-of-contents)
 
-        This project is covered by the following Common-Development-and-Distribution.
+        This project is covered by the following MIT.
         
 
 ## [Description](#table-of-contents)
 
-    sample
+    Sample description
     
 ## [Installation](#table-of-contents)
 
-    sample
+    git clone, copy git repo
 
 ## [Usage](#table-of-contents)
 
-    sample
+    go to root directory, type node index.js
 
 ## [Contribution](#table-of-contents)
 
-    sample
+    No contributions at this time
 
 ## [Testing](#table-of-contents)
 
-    sample
+    sample test
 
 ## [Questions](#table-of-contents)
 
 If you have any questions, please reach out to me via GitHub or email.
 
-   [GitHub Repository](https://github.com/sample)
+   [GitHub Repository](https://github.com/test)
 
-   [Email Address: sample](mailto:sample)
+   [Email Address: test](mailto:test)
