@@ -10,30 +10,37 @@
 * [Usage](#usage)
 * [Contribution Guidelines](#contribution)
 * [Testing Instructions](#testing)
-* [Contact](#contact)
+* [Questions](#questions)
+
+## [License](#table-of-contents)
+
+        This project is covered by the following Common-Development-and-Distribution.
+        
 
 ## [Description](#table-of-contents)
 
-    This sample description provides project details.
+    sample
     
 ## [Installation](#table-of-contents)
 
-    Npm install
+    sample
 
 ## [Usage](#table-of-contents)
 
-    node index.js
+    sample
 
 ## [Contribution](#table-of-contents)
 
-    No contribution allowed
+    sample
 
 ## [Testing](#table-of-contents)
 
-    run test
+    sample
 
-## [Contact](#table-of-contents)
+## [Questions](#table-of-contents)
 
-   [GitHub Repository](https://github.com/test)
+If you have any questions, please reach out to me via GitHub or email.
 
-   [Email Address: test](mailto:test)
+   [GitHub Repository](https://github.com/sample)
+
+   [Email Address: sample](mailto:sample)

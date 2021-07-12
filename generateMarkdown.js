@@ -24,8 +24,6 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
     if (license !== 'no license') {
         return `
-        ## License
-
         This project is covered by the following ${license}.
         `;
     } else {
@@ -47,7 +45,10 @@ ${renderLicenseBadge(data.license)}
 * [Usage](#usage)
 * [Contribution Guidelines](#contribution)
 * [Testing Instructions](#testing)
-* [Contact](#contact)
+* [Questions](#questions)
+
+## [License](#table-of-contents)
+${renderLicenseSection(data.license)}
 
 ## [Description](#table-of-contents)
 
@@ -69,7 +70,9 @@ ${renderLicenseBadge(data.license)}
 
     ${data.testing}
 
-## [Contact](#table-of-contents)
+## [Questions](#table-of-contents)
+
+If you have any questions, please reach out to me via GitHub or email.
 
    [GitHub Repository](https://github.com/${data.github})
 
