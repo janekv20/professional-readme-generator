@@ -43,4 +43,4 @@ If you have any questions, please reach out to me via GitHub or email.
 
    [GitHub Repository](https://github.com/janekv20)
 
-   [Email Address: test](mailto:janekv20@gmail.com)
+   [Email Address: janekv20@gmail.com](mailto:janekv20@gmail.com)
