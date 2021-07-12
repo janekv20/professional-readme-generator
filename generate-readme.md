@@ -41,6 +41,6 @@
 
 If you have any questions, please reach out to me via GitHub or email.
 
-   [GitHub Repository](https://github.com/test)
+   [GitHub Repository](https://github.com/janekv20)
 
-   [Email Address: test](mailto:test)
+   [Email Address: test](mailto:janekv20@gmail.com)
