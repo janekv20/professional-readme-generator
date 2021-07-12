@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = required('./Develop/utils/generateMarkdown.js')
+const generateMarkdown = require('./develop/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -9,13 +9,29 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project? This is a required question.'
+        message: 'What is the title of your project? This is a required question.',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please enter your project title!');
+                return false;
+            }
+        }
     },
     //Description of Project
     {
         type: 'input',
         name: 'description',
-        message: 'Tell us a description of your project. This field is required.'
+        message: 'Tell us a description of your project. This field is required.',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('Please enter your project description!');
+                return false;
+            }
+        }
     },
     //Table of Contents
     {},
@@ -23,25 +39,57 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'How do you install your project? This field is required.'
+        message: 'How do you install your project? This field is required.',
+        validate: installationInput => {
+            if (installationInput) {
+                return true;
+            } else {
+                console.log('Please enter installation details!');
+                return false;
+            }
+        }
     },
     //Usage Information
     {
         type: 'input',
         name: 'usage',
-        message: 'How do you use your project? This field is required.'
+        message: 'How do you use your project? This field is required.',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('Pleaes enter usage information!');
+                return false;
+            }
+        }
     },
     //Contribution Guidelines
     {
         type: 'input',
         name: 'contribution',
-        message: 'How can people contribute to your project? This field is required.'
+        message: 'How can people contribute to your project? This field is required.',
+        validate: contributionInput => {
+            if (contributionInput) {
+                return true;
+            } else {
+                console.log('Please enter contribution guidelines!');
+                return false;
+            }
+        }
     },
     //Testing Instructions
     {
         type: 'input',
         name: 'testing',
-        message: 'How do you test your project? This field is required.'
+        message: 'How do you test your project? This field is required.',
+        validate: testingInput => {
+            if (testingInput) {
+                return true;
+            } else {
+                console.log('Please enter testing instructions!');
+                return false;
+            }
+        }
     },
     //License
     {
@@ -49,17 +97,41 @@ const questions = [
         name: 'licensing',
         message: 'Select the license that covers your project.',
         choices: ['Apace', 'MIT', 'Mozilla-Public', 'GNU-General Public', 'Common-Development-and-Distribution', 'None'],
+        validate: licensingInput => {
+            if (licensingInput) {
+                return true;
+            } else {
+                console.log('Select a license option!');
+                return false;
+            }
+        }
     },
     //Enter GitHub Username
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub Username. This field is required.'
+        message: 'Enter your GitHub Username. This field is required.',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub username!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address.'
+        message: 'Enter your email address.',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false;
+            }
+        }
     }
 ];
 
