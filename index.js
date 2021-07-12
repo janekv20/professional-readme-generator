@@ -92,7 +92,7 @@ const questions = [
     //License
     {
         type: 'checkbox',
-        name: 'licensing',
+        name: 'license',
         message: 'Select the license that covers your project.',
         choices: ['Apace', 'MIT', 'Mozilla-Public', 'GNU-General Public', 'Common-Development-and-Distribution', 'None'],
         validate: licensingInput => {

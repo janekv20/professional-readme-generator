@@ -1,6 +1,6 @@
-# Sample ReadMe
+# Sample
 
-![badge](https://img.shields.io/badge/license-${license}-blue)
+![badge](https://img.shields.io/badge/license-Common-Development-and-Distribution-green)
 
 ## Table-of-Contents
 
@@ -14,26 +14,26 @@
 
 ## [Description](#table-of-contents)
 
-    Sample description
+    This sample description provides project details.
     
 ## [Installation](#table-of-contents)
 
-    Using npm install
+    Npm install
 
 ## [Usage](#table-of-contents)
 
-    Clone code, open code, then run node index.js
+    node index.js
 
-## [Contribution Guidelines](#table-of-contents)
+## [Contribution](#table-of-contents)
 
-    At this time they cannot
+    No contribution allowed
 
-## [Testing Instructions](#table-of-contents)
+## [Testing](#table-of-contents)
 
-    test
+    run test
 
 ## [Contact](#table-of-contents)
 
-   [GitHub Repository](https://github.com/janekv20)
+   [GitHub Repository](https://github.com/test)
 
-   [Email Address: janekv20@gmail.com](mailto:janekv20@gmail.com)
+   [Email Address: test](mailto:test)
