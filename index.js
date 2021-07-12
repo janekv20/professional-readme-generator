@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./develop/generateMarkdown.js')
+const generateMarkdown = require('./generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -9,7 +9,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project? This is a required question.',
+        message: 'What is the title of your project? (Required)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
@@ -23,7 +23,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Tell us a description of your project. This field is required.',
+        message: 'Tell us a description of your project. (Required)',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -33,13 +33,11 @@ const questions = [
             }
         }
     },
-    //Table of Contents
-    {},
     //Installation
     {
         type: 'input',
         name: 'installation',
-        message: 'How do you install your project? This field is required.',
+        message: 'How do you install your project? (Required)',
         validate: installationInput => {
             if (installationInput) {
                 return true;
@@ -53,7 +51,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'How do you use your project? This field is required.',
+        message: 'How do you use your project? (Required)',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -67,7 +65,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribution',
-        message: 'How can people contribute to your project? This field is required.',
+        message: 'How can people contribute to your project? (Required)',
         validate: contributionInput => {
             if (contributionInput) {
                 return true;
@@ -81,7 +79,7 @@ const questions = [
     {
         type: 'input',
         name: 'testing',
-        message: 'How do you test your project? This field is required.',
+        message: 'How do you test your project? (Required)',
         validate: testingInput => {
             if (testingInput) {
                 return true;
@@ -110,7 +108,7 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub Username. This field is required.',
+        message: 'Enter your GitHub Username.(Required)',
         validate: githubInput => {
             if (githubInput) {
                 return true;
@@ -123,7 +121,7 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address.',
+        message: 'Enter your email address.(Required)',
         validate: emailInput => {
             if (emailInput) {
                 return true;
@@ -145,7 +143,25 @@ function writeToFile(fileName, data) {
 };
 
 // TODO: Create a function to initialize app
-function init() { }
+const init = () => {
+    return inquirer.prompt(questions)
+        .then(data => {
+            return data;
+        })
+}
 
 // Function call to initialize app
-init();
+init()
+    .then(data => {
+        console.log(data);
+        return generateMarkdown(data);
+    })
+    .then(page => {
+        return writeToFile(page);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse.message);
+    })
+    .catch(err => {
+        console.log(err);
+    })
